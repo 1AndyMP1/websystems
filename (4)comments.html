@@ -1,0 +1,457 @@
+<!--
+Comments.html
+
+This page is one where the content, not only the execution, matters.  The specific points you are required to comment on are:
+
+- The overall structure of your website. What the pages are and how they interact. If you wish, you may include one or more diagrams to enhance the text in your description.
+- The internal structure of each web page. If you wish, you may include one or more diagrams to enhance the text in your description.
+- A description of the styles used. This could be put in tabular form and could include the selector used, the type of selector, what the style does and where it is used.
+- Discussion of the graphic design aspects of the site. This could include such topics as overall layout, colours used, typefaces used etc.
+- Discussion of how the <alt> tag is used. Also discussion of how the site works when css is turned off. (The Firefox browser has a facility that allows CSS to be turned off).
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Comments_ </title>
+        <link rel="stylesheet" href="websystems.css">
+    </head>
+
+<!--menubar hyperlinks-->
+    <body>
+        
+<nav class="navbar">
+    <div class="logo" id="site-logo">|_ANDY_|</div>
+    <ul class="nav-links">
+        <li>
+        <a href="(1)index.html" class="no_underline">Home Page</a>
+        <a href="(2)past.html" class="no_underline">My Past</a>
+        <a href="(3)future.html" class="no_underline">My Future</a>
+        <a href="(4)comments.html" class="no_underline">Comments</a>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <div class ="explanations">
+    <h1>
+    comments
+    </h1>
+        <h2>
+        Overll Structure
+        </h2> 
+
+<p>As for the structure of the site, the following wireframe diagram demonstrates the consistent format that each page followed. The home page is the only one breaks the
+    format slightly with a simple landing page, but after that follows a similar format. The navbar on the top serves as a consistent navigation element and return to the
+    home page.</p>
+		<img src="images/website_wireframe.jpg" alt="wireframe" class="wireframe">
+
+
+        <h2>
+        Graphic Design
+        </h2> 
+<p>The website uses a specific colour palette I found online that appealed the most to me. From this URL <i>figma.com/resource-library/color-combinations/</i>,
+I chose the Ink Wash combination, featuring grey, blue, and off-white. As for my personal accent, I chose gold yellow. The navbar has hover effects, creating a responsive UI.
+</p>
+		<img src="images/Ink_Wash.png" alt="colour_palette" class="colour_palette">
+        <!--source: figma.com/resource-library/color-combinations/-->
+<p>Additionally, the font used was Helvetica Neue, a sans-seriff font that I found to look nice with a dark grey font colour. The logo however uses Times New Roman with gold color to be distinct from the rest of the site.</p>
+
+        <h2>
+        Alt Tag and CSS off
+        </h2>
+<h3>
+alt tag
+</h3>
+<p>The alt tag was mainly used for images. As most of the images had long names, I used the alt tag to easier names to write like portrait_3 in accordance
+    with the page being modified.
+</p>
+<h3>
+css off
+</h3>
+
+<p>When CSS is turned off, the pages still display the content and images properly, as well as the hyperlinks to each page, the footer, tables, etc. The design and aesthetics of the
+    website however is significantly reduced, but the website is still functioanl and usable.
+</p>
+
+        <h2>
+        header/navbar.html
+        </h2> 
+html-elements needed to prep navbar
+
+
+<table>
+            <tr>
+                <th>html-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>&lt;nav class="navbar"&lt/div&gt</b></td>
+                <td>All &lt;a&gt; tag links wrapped in navbar class to be modified within css</td>
+            <tr>
+                <td><b>&lt;div&gt; class="logo" id="site-logo"  |_ANDY_| &lt;/div&gt;</b></td>
+                <td>Makes logo a seperate entity/class</td>
+            </tr>
+            <tr>
+                <td><b>&lt; class="nav-links" &gt;</b></td>
+                <td>Makes &lt;a&gt; tag elements an unorder list as it helps with styling within css and overall readability</td>
+            </tr>
+</table>
+            <p>
+            The <i>.navbar class</i> justifies the size and design elements of the entire navigation bar. <br>
+            </p>
+
+        <table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>Position: sticky</b></td>
+                <td>Ensures navbar stays at the top when scrolling</td>
+            <tr>
+                <td><b>Top: 0</b></td>
+                <td>Ensures that the navbar stays at the very edge</td>
+            </tr>
+            <tr>
+                <td><b>z-index: 100</b></td>
+                <td>Ensures nav bar stays above everything</td>
+            </tr>
+            <tr>
+                <td><b>box-sizing: border-box</b></td>
+                <td>ensures all content within navbar stays within set borders</td>
+            </tr>
+            <tr>
+                <td><b>Display: flex;</b></td>
+                <td>Ensures that the navbar stays at the very edge</td>
+            </tr>
+            <tr>
+                <td><b>justify-content: space-between;</b></td>
+                <td>Pushes logo and navbar elements to the sides, hence having spacing inbetween</td>
+            </tr>
+            <tr>
+                <td><b>align-items: stretch;</b></td>
+                <td>Ensures logo and navbar elements fill the entire height of the navbar <i>(important for hover properties)</i></td>
+            </tr>
+            <tr>
+                <td><b>color and background-color;</b></td>
+                <td>sets the color palette for navbar and rest of site, which is navy-blue, off-white, and yellow as accents</td>
+            </tr>
+</table>
+
+ .navlinks class styles navigation hyperlinks
+
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>list-style: none</b></td>
+                <td>Removes markers like bullet points, making navigation elements look cleaner</td>
+            <tr>
+                <td><b>margin and padding</b></td>
+                <td>Keeps navlink elements to the edge</td>
+            </tr>
+</table>
+
+<i>.nav-links li</i> targets list elements within navlinks and essentially ensures the child properties become flex items<br><br>
+
+<i>.nav-links a</i> targets all a tags, mainly the navigation elements.
+
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>display: flex</b></td>
+                <td>makes each a tag container flex, allowing for finer control over alignment</td>
+            <tr>
+                <td><b>align-items: center</b></td>
+                <td>centers content</td>
+            </tr>
+            <tr>
+                <td><b>padding: 15px 15px</b></td>
+                <td>Adds space within nav elements, increasing clicking area.</td>
+            </tr>
+            <tr>
+                <td><b>font weight: 800</b></td>
+                <td>Makes text extra bold</td>
+            </tr>
+            <tr>
+                <td><b>font size: 20px</b></td>
+                <td>Increases font size, improving readability</td>
+            </tr>
+            <tr>
+                <td><b>text-decoration: none</b></td>
+                <td>Removes default underlines under hyperlinks</td>
+            </tr>
+            <tr>
+                <td><b>transition: background-color 0.3s ease</b></td>
+                <td>Smooth animation for when nav elements are hovered over rather than instant color change</td>
+            </tr>
+</table>
+
+.nav-links a:hover class changes the color of nav elements when hovered on <br><br>
+
+#site-logo design
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>display: flex</b></td>
+                <td>Makes container flex, allowing for finer control over alignment</td>
+            <tr>
+                <td><b>align-items: center</b></td>
+                <td>Centers content</td>
+            </tr>
+            <tr>
+                <td><b>padding: 0px 30px</b></td>
+                <td>Ensures height has some space between text and nav border</td>
+            </tr>
+            <tr>
+                <td><b>font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; </b></td>
+                <td>Changes font to times new roman, distinguishing from the san-serif fonts of the sites default text</td>
+            </tr>
+            <tr>
+                <td><b>font-weight: 800</b></td>
+                <td>Makes logo extra bold</td>
+            </tr>
+            <tr>
+                <td><b>font-size: 40px</b></td>
+                <td>Larger font size for better distinction</td>
+            </tr>
+            <tr>
+                <td><b>color: #d4af37</b></td>
+                <td>sets yellow accent, distinguishing from sites color scheme</td>
+            </tr>
+</table>
+
+        <h2>
+        footer
+        </h2> 
+<table>
+            <tr>
+                <th>html-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>&lt;footer&gt;</b></td>
+                <td>to indicate that the section being created is for the footer</td>
+            <tr>
+                <td><b>content</b></td>
+                <td>content mainly includes author, email, and copyright</i></td>
+            </tr>        
+</table>
+
+
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>.body class - min-height: 100vh</b></td>
+                <td>minimum height of viewport is at 100%, so reaches entire screen</td>
+            <tr>
+                <td><b>.body class - display: flex & flex_direction: column</b></td>
+                <td>Added to make body a vertical flex container, so that child elements <i>(i.e. navbar, main, footer, etc) will stack on top of each other and can be manipulated with flex properties.</i></td>
+            </tr>
+                <td><b>.main class - flex: 1</b></td>
+                <td>tells main to grow and fill in any empty space between navbar and footer</td>
+            <tr>
+                <td><b>customised elements like padding and text-alignment</b></td>
+                <td>the footer follows the color scheme set by the website, and has been centered. Padding is set at 30px to create distance between the top of the footer and sides.</td>
+            <tr>           
+</table>
+
+        <h2>
+        index.html
+        </h2> 
+            <h3>
+            landing page
+            </h3>
+<table>
+            <tr>
+                <th>html-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>basic html elements</b></td>
+                <td>Basic elements like the &lt;html&gt; tag, &lt;a&gt; tags, &lt;head&gt;, &lt;title&gt;, etc. were added for all pages for basic functionality</td>
+            <tr>
+                <td><b>landing page html</b></td>
+                <td>Welcome text is wrapped within a &lt;header&gt; tag and classified as h_text div class. &lt;Span&gt; tags are centered around "Welcome" as it is standout text</td>
+            </tr>        
+</table>
+
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>.header class - background image size</b></td>
+                <td>In order to place the background image, the width and height was set as width: 100% and height: 100vh to fill the entire screen. Also, background-size: cover was set to cover the entire page<br></td>
+            <tr>
+                <td><b>.header class - background styling</b></td>
+                <td>linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url(images/mountains_blue.jpg) - targets image file and darkens the image for better visibility of text</td>
+            </tr>
+                <td><b>.h_text class- position: absolute</b></td>
+                <td>Welcome text stays in the same place no matter what</td>
+            <tr>
+                <td><b>.h_text class - positioning</b></td>
+                <td>Text was position in the center using top: 50%, left 50%, transform: translate(-50%. -50%).</td>
+            <tr>
+                <td><b>.h_text class - text styling</b></td>
+                <td>font-size: 100px for distinct heading, already bolded from h1 classification in html. Color:#ffffef text color scheme</td>                                             
+</table>
+
+            <h3>
+            biography           
+            </h3>
+<table>
+            <tr>
+                <th>html-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>content</b></td>
+                <td>Basic personal information and what the website is about</td>
+            <tr>
+            </tr>
+                <td><b>image</b></td>
+                <td>image placed within about-section class for proper flex/wrap adjustment within css</td>
+            <tr>
+                <td><b>unordered list</b></td>
+                <td>List wrapped within &lt;ul&gt; tag, with content being listed with &lt;li&gt; tag. To add sub-bulletpoints, another &lt;ul&gt; tag
+                    was added within. Content mainly includes personal interests and basic skills
+                </td>
+            </tr>        
+</table>
+
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>.about-section class - display: flex, flex-direction: row, align-items: flex-start</b></td>
+                <td>This css code is done purely so that the image and text will sit side-by-side</td>
+            <tr>
+                <td><b>.about-section class - gap: 30px, padding: 20px</b></td>
+                <td> Gap and padding is done so there is some space between the image and text.</td>
+            </tr>
+            <tr>
+                <td><b>.portrait class<br>max-width: 35%, border-radius: 10px, margin: 10px, box-shadow:0 24px 48px</b></td>
+                <td> width was done as image stretched across entire screen, disallowing for flex to work. Other elements like border and margin were done to create distance between text and image.
+                    Box-shadow was added for a drop shadow, creating a 3d effect.
+                </td>
+            </tr>             
+</table>
+
+        <h2>
+        past.html
+        </h2> 
+<table>
+            <tr>
+                <th>html-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>table</b></td>
+                <td>List all my skills in a table format. This done by using the &lt;table&gt; tag, then using the &lt;tr&gt tag, then placing informtion in via the &lt;th&gt; tag.</td>
+            </tr>
+                <td><b>pastwork images</b></td>
+                <td>Images are placed within pastwork class for editing, and then 3 images are placed with proper naming.</td>
+            </tr>
+</table>
+
+
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>.table class - border-collapse: collapse, max-widith: 80%, margin: 30px</b></td>
+                <td>Border-collapse prevents double lines. The other properties just change the way it looks and spacing.</td>
+            <tr>
+                <td><b>.td, th, .th - border: 1px solid black, padding: 10px 15px, background-color: #d4af37. color: white</b></td>
+                <td> Changes the styling of the table, making the border slimmer, background color of the main background color of the headings yellow and the rest an offwhite.
+                </td>
+            </tr>
+            <tr>
+                <td><b>.pastwork class - display: flex, gap: 10px, margin: 10px, justify-content: center</b></td>
+                <td>Display flex allows for images to sit side-by-side, then gap and margin add spaces inbetween the image and page, justify-content: center centers the images.</td>
+            </tr>
+            <tr>
+                <td><b>.pastwork img class - max-width: 30%, height-auto;</b></td>
+                <td>Class targets the images within .pastwork class. Just changes the size and height, shrinking it so they can sit side-by-side.</td>
+            </tr>     
+</table>
+        <h2>
+        future.html
+        </h2> 
+<table>
+            <tr>
+                <th>html-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>content</b></td>
+                <td>Just contains an image and content regarding the future within futureContainer class, futureContent class, and futuretext class.</td>
+            </tr>
+</table>
+
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>.futureContainer - display: block</b></td>
+                <td>Turns everything within into a block, allowing for it to wrap around other elements and be affected by flex properties.</td>
+            </tr>
+                <td><b>.futureHeading - margin: 10px</b></td>
+                <td>Creates space between the heading and other content.</td>
+            </tr>
+                <td><b>.futureContent - display: flex, align-items: flex-start, gap: 20px, margin: 20px</b></td>
+                <td>Display: flex just allows for content to sit side-by-side, align-items: flex-start aligns the item at the start of the container. Gap and margin is there to create some space so it doesn't feel cluttered.</td>
+            </tr>
+                <td><b>.futuretext - margin-left and font-size</b></td>
+                <td>Creates space into left. Font size is increased for better visibility and fill in white space.</td>
+            </tr>
+                <td><b>.portrait_3 - max-width: 35%, border-radius: 10px, margin-left:30px, box-shadow: 0 24px, 48px</b></td>
+                <td>Max-width makes the image smaller, border-radius: 10px rounds the edges, margin-left creates more space with the left side of the image, box-shadow adds a drop shadow for 3d effect.</td>
+            </tr>
+</table>
+
+        <h2>
+        comments.html
+        </h2> 
+<table>
+            <tr>
+                <th>html-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>content and tables</b></td>
+                <td>Contains contains the instructions on what each element does, how it was created, the design of the site, etc. The description of each class and code is organised within tables for easier readability. All content is wrapped in the explanations class.</td>
+            </tr>
+                <td><b>images</b></td>
+                <td>Content is placed after the related sections for more info.</td>
+            </tr>
+</table>
+
+<table>
+            <tr>
+                <th>css-elements</th>  
+                <th>description</th>
+            </tr>
+                <td><b>.explanations - margin: 30px</b></td>
+                <td>Creates space between the edge of the site and content.</td>
+            </tr>
+                <td><b>.wireframe & .colour_palette - display: block, margin: 0 auto</b></td>
+                <td>Converts image to block-level element, allowing for customisation or centering via margin: 0 auto.</td>
+            </tr>
+</table>
+
+        </main>
+    </body>
+
+<footer>
+    <hr>
+        <b>Author</b>: Andy Mai-Pham<br>
+        <b>contact</b>: <a href="mailto:andy.mai-pham@student.uts.edu.au"><i>andy.mai-pham@student.uts.edu.au </i></a><br>
+        &copy; Copyright Reserved - <i>https://creativecommons.org/licenses/by-sa/4.0/</i><br>
+</footer>
+
+</html>
